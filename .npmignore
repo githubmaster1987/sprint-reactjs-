@@ -1,0 +1,9 @@
+.jshintrc
+.gitignore
+.npmignore
+.coveralls.yml
+wercker.yml
+/docs
+/examples
+/test
+upload-assets-to-s3.sh

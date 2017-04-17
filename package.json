@@ -1,0 +1,86 @@
+{
+  "name": "sprintly-ui",
+  "title": "Sprintly UI",
+  "description": "A React-based UI kit for building Sprintly interfaces",
+  "version": "2.0.1",
+  "main": "./src/index.js",
+  "homepage": "https://github.com/sprintly/sprintly-ui",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sprintly/sprintly-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sprintly/sprintly-ui/issues"
+  },
+  "dependencies": {
+    "browserify-istanbul": "^0.2.1",
+    "fuzzy": "^0.1.0",
+    "lodash": "^3.10.1",
+    "object-path": "^0.9.0",
+    "@sprintly/react-onclickoutside": "^1.0.0"
+  },
+  "peerDependencies": {
+    "moment": "^2.10.6",
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "babelify": "^6.1.2",
+    "browserify": "^11.1.0",
+    "chai": "^3.2.0",
+    "connect": "^3.4.0",
+    "coveralls": "^2.11.2",
+    "es5-shim": "^4.0.5",
+    "exorcist": "^0.4.0",
+    "gulp": "^3.9.0",
+    "gulp-csso": "^1.0.0",
+    "gulp-less": "^3.0.1",
+    "gulp-mocha-phantomjs": "^0.10.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-uglify": "^1.4.1",
+    "gulp-util": "^3.0.6",
+    "istanbul": "^0.3.20",
+    "mocha": "^2.0.1",
+    "moment": "^2.10.6",
+    "open": "^0.0.5",
+    "phantomjs": "1.9.7-15",
+    "react": "^0.13.3",
+    "serve-static": "^1.10.0",
+    "sinon": "^1.12.1",
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "^3.4.0"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "scripts": {
+    "dev": "gulp build && gulp less && gulp dev-server",
+    "dev-test": "gulp test && gulp test-server",
+    "test": "gulp test",
+    "coverage": "gulp test-coverage && istanbul report --root coverage lcov && mv coverage/ test/",
+    "coveralls": "cat test/coverage/lcov.info | coveralls",
+    "prepublish": "gulp jsmin && gulp cssmin",
+    "clean": "rm test/build.js && rm -rf test/coverage/"
+  },
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "test": "test"
+  },
+  "keywords": [
+    "sprintly",
+    "react",
+    "ui kit",
+    "ui-kit",
+    "ui library",
+    "components",
+    "ui components",
+    "component library",
+    "quickleft",
+    "quick left"
+  ],
+  "author": "Quick Left Team (http://quickleft.com/)",
+  "license": "BSD-2-Clause"
+}
